@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236637483729",
+    "project_id": "taskapp-ce88c",
+    "storage_bucket": "taskapp-ce88c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236637483729:android:15e8ee9c8c89e4dedccbf0",
+        "android_client_info": {
+          "package_name": "com.example.firebase_sample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR52YtJvgXgQ1YLXrh3nKNVMKz6iYqIQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
