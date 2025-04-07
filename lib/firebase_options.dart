@@ -47,29 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDZZWfGM0tAPPbBTVucR5qLxdOhnCuPU84',
-    appId: '1:236637483729:web:da396a11c9cfda37dccbf0',
-    messagingSenderId: '236637483729',
-    projectId: 'taskapp-ce88c',
-    authDomain: 'taskapp-ce88c.firebaseapp.com',
-    storageBucket: 'taskapp-ce88c.firebasestorage.app',
-    measurementId: 'G-00ZKHQERV0',
+    apiKey: 'AIzaSyC0g9NJwKB7Vn--NKXXzPomOTjNc-FVp0o',
+    appId: '1:185948383151:web:752b381d1bc98391dfb15a',
+    messagingSenderId: '185948383151',
+    projectId: 'fir-9dd6c',
+    authDomain: 'fir-9dd6c.firebaseapp.com',
+    storageBucket: 'fir-9dd6c.firebasestorage.app',
+    measurementId: 'G-FK23TCTJPG',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDR52YtJvgXgQ1YLXrh3nKNVMKz6iYqIQQ',
-    appId: '1:236637483729:android:15e8ee9c8c89e4dedccbf0',
-    messagingSenderId: '236637483729',
-    projectId: 'taskapp-ce88c',
-    storageBucket: 'taskapp-ce88c.firebasestorage.app',
+    apiKey: 'AIzaSyBIJtnsGUDB0IWNWwTNh_nCaHX4NZG_mLA',
+    appId: '1:185948383151:android:fd9b46f4489a9e93dfb15a',
+    messagingSenderId: '185948383151',
+    projectId: 'fir-9dd6c',
+    storageBucket: 'fir-9dd6c.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCYpsQKinO0YL_CGEQa70fgvTwZaZqz88U',
-    appId: '1:236637483729:ios:85d8051189c2602cdccbf0',
-    messagingSenderId: '236637483729',
-    projectId: 'taskapp-ce88c',
-    storageBucket: 'taskapp-ce88c.firebasestorage.app',
+    apiKey: 'AIzaSyB045vmMrSeqIJ3D0jZHzMooP-zAZgb3e4',
+    appId: '1:185948383151:ios:9e8e5e138543d692dfb15a',
+    messagingSenderId: '185948383151',
+    projectId: 'fir-9dd6c',
+    storageBucket: 'fir-9dd6c.firebasestorage.app',
     iosBundleId: 'com.example.firebaseSample',
   );
+
 }
