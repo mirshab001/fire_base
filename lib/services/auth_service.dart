@@ -22,6 +22,9 @@ class AuthService {
         UserModel newUser =
             UserModel(uid: appUser.uid, name: name, email: email, phone: phone);
 
+        //store user to firestore
+        await db.collection("users").doc(appUser.uid).set(newUser.toJson());
+
         //store the user id in shared prefs
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString("userId", appUser.uid);
@@ -45,6 +48,7 @@ class AuthService {
         await prefs.setString("userId", appUser.uid);
         return appUser.uid;
       }
+      return null;
     } catch (e) {
       throw ErrorHandler.handleFirebaseAuthError(e.toString());
     }
