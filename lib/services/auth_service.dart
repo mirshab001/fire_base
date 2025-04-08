@@ -43,11 +43,12 @@ class AuthService {
       if (appUser != null) {
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString("userId", appUser.uid);
-        return "";
+        return appUser.uid;
       }
     } catch (e) {
       throw ErrorHandler.handleFirebaseAuthError(e.toString());
     }
+    return null;
   }
 
   //method to log out

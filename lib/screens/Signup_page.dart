@@ -1,5 +1,6 @@
 import 'package:firebase_sample/providers/auth_controller.dart';
 import 'package:firebase_sample/screens/Home_page.dart';
+import 'package:firebase_sample/screens/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +18,6 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController phoneText = TextEditingController();
   TextEditingController passwordText = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     final authController = Provider.of<AuthController>(context);
@@ -29,7 +29,6 @@ class _SignupPageState extends State<SignupPage> {
           child: Form(
             key: _formKey,
             child: Column(
-
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Center(
@@ -139,20 +138,25 @@ class _SignupPageState extends State<SignupPage> {
                     minimumSize: const Size(200, 50),
                   ),
                   onPressed: authController.isLoading
-                      ? null : () async {
-                    try {
-                      await authController.signUp(
-                        userText.text, emailText.text.trim(), phoneText.text,
-                        passwordText.text.trim(),);
-                      if (authController.user != null) {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => HomePage()));
-                      }
-                    }catch (e) {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                    }
-                  },
-
+                      ? null
+                      : () async {
+                          try {
+                            await authController.signUp(
+                              userText.text,
+                              emailText.text.trim(),
+                              phoneText.text,
+                              passwordText.text.trim(),
+                            );
+                            if (authController.user != null) {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            }
+                          } catch (e) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(e.toString())));
+                          }
+                        },
                   child: const Text(
                     "Sign Up",
                     style: TextStyle(
@@ -178,9 +182,7 @@ class _SignupPageState extends State<SignupPage> {
                     backgroundColor: Colors.black,
                     minimumSize: const Size(200, 50),
                   ),
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                   child: const Text(
                     "Sign In With Google",
                     style: TextStyle(
@@ -202,7 +204,12 @@ class _SignupPageState extends State<SignupPage> {
                           color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                     TextButton(
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ));
                         // Navigate to login
                       },
                       child: const Text(

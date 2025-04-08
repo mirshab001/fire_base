@@ -51,6 +51,7 @@ class AuthController extends ChangeNotifier {
       String? uid = await authService.login(email, password);
       if (uid != null) {
         user = await authService.fetchUser(uid);
+        print(uid);
       }
     } catch (e) {
       print(e);
